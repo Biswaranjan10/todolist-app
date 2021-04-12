@@ -1,0 +1,46 @@
+<div class="progress" *ngIf="fetching">
+    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+</div>
+<div class="container-fluid bg-primary shadow" style="height:160px">
+    <h1 class="text-white text-center pt-4">Todo List</h1>
+    
+</div>
+<div class="container todo shadow">
+    <input type="text" class="form-control" placeholder="Things you wan to do today ?" #todo>
+    <button class="btn btn-dark" (click)="createTodo(todo.value)"> Add</button>
+</div>
+
+<div class="container-fluid mt-5 display-container " >
+    <ul class="list-container" >
+        <li class=" list border p-2 " *ngFor="let listData of mylistData ; index as i"  id ="list">
+         
+                <div class="list-data" >
+                    <div class="form-check ml-2" >
+                        <input type="checkbox" class="form-check-input">
+                        <label class="form-check-label" style="font-weight: bold;">{{listData.data}}</label>
+                    </div>
+                    <div>
+                        <p class="time">{{listData.creationTime}}</p>
+                        <input  type="color" class="color"  #color>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-light" (click)="changeColor(listData.id,color.value)">color</button>
+                        <button class="btn btn-light" (click)="addComment(i,listData.id)">Comment</button>
+                        <button class="btn btn-light" (click)="onDeleteList(listData.id)">Delete</button>
+                    </div>
+                </div>
+        </li>      
+    </ul>
+    <div class="comment-section border shadow p-3" id="cs" > 
+        <div class="comments" >
+            <input type="text" class="form-control" placeholder="Write a comment" #comment>
+            <button class="btn btn-dark" (click)="submitcomment(comment.value)">Submit Comment</button>
+        </div>
+        <ul class="mt-4">
+            <p>Comments :</p>
+            <li>
+                <p></p>
+            </li>
+        </ul>
+    </div>
+</div>

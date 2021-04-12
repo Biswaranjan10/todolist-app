@@ -1,0 +1,112 @@
+
+*{
+    font-family: lato;
+}
+/* todo style start */
+
+    .todo{
+        background-color: white;
+        height:100px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-top: -50px;
+        
+    }
+    .todo input{
+        width:90%;
+        opacity: 0.9;
+    }
+    .todo button{
+        position: absolute;
+        right:10px;
+        width: 8%;
+    }
+    .todo button span{
+        color: white;
+       
+    }
+
+/* todo style end */
+
+/* display-container start */
+    
+    .display-container {
+       
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+       
+    }
+
+/* display-container end */
+   
+/* list container start */
+
+.list-container{
+    position: relative;
+    width: 100%;
+    left:-20px;
+    
+}
+/* list container end */
+/* list style start*/
+
+.list{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+.check{ 
+    display: flex;
+    justify-content: start;
+}
+.btn-group{
+    position: absolute;
+    right: 0;
+    
+}
+.color{
+    position: absolute;
+    right: 240px;
+    top:15px;
+}
+.time{
+    position: absolute;
+    right: 300px;
+    top:15px; 
+}
+
+/* list style end */
+
+/* list-data start */
+.list-data{
+    display: flex;
+    width: 100%;
+    list-style: none;
+    position: relative;
+    height: 50px;
+    align-items: center;
+}
+
+/* list-data end */
+/* comment section start */
+   .comment-section{
+       display: none;
+       background-color: lightgray;
+   }
+
+/* comment section end */
+/* comments style start */
+    .comments{
+        display: visible;
+        display: flex;
+        
+    }
+    .comments input{
+        width: 83%;
+    }
+    .comments button{
+        width: 17%;
+    }
+/* comments style end */
